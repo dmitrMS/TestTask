@@ -1,0 +1,36 @@
+.main-general {
+  position: relative;
+  display: flex;
+  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  left: 8%;
+  margin-right: 15%;
+}
+
+.main-general-text {
+  padding: 4%;
+  max-width: 50%;
+  margin-left: 10%;
+}
+
+.main-general__button {
+    
+}
+
+/* .main-general__img {
+    position: absolute;
+    bottom: 0; 
+} */
+
+.main-general-text__h1 {
+}
+
+.main-general-text-job {
+  color: #979797;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.main-general-text-overview {
+  max-width: 70%;
+}

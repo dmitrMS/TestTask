@@ -3,18 +3,18 @@
   <Menubar/>
   <CompanyLending/>
   <Features
-      heading="Наши преимущества"
       :featuresFirst="[
-        { title: 'Высокая скорость', description: 'Молниеносные загрузки страниц.' },
-        { title: 'Легкость в использовании', description: 'Простота и удобство работы.' },
-        { title: 'Гибкость', description: 'Гибкие возможности настройки.' },
+        { title: 'Развитие', description: 'что-то',icon:'Rasvitie.svg' },
+        { title: 'Обучение', description: 'что-то',icon:'Obychenie.svg' },
+        { title: 'Ответсвенность', description: 'Гибкие возможности настройки.',icon:'Otvetstvennost.svg' },
       ]"
       :featuresSecond="[
-        { title: 'Высокая скорость', description: 'Молниеносные загрузки страниц.' },
-        { title: 'Легкость в использовании', description: 'Простота и удобство работы.' },
-        { title: 'Гибкость', description: 'Гибкие возможности настройки.' },
+        { title: 'Динамика', description: 'Общего центра обслуживания.Современные технологии, проекты, рабочие группы',icon:'Dinamica.svg' },
+        { title: 'Комфорт', description: 'что-то',icon:'Komfort.svg' },
+        { title: 'Надёжность', description: 'что-то',icon:'Nadezhnost.svg' },
       ]"
     />
+    <GeneralManager/>
 </div>
 </template>
 
@@ -22,13 +22,15 @@
 import Menubar from './components/Menubar/Menubar.vue';
 import CompanyLending from './components/CompanyLanding/CompanyLending.vue';
 import Features from './components/Features/Features.vue';
+import GeneralManager from './components/GeneralManagerInfo/GeneralManager.vue';
 
 export default {
   name: 'App',
   components: {
     Menubar,
     CompanyLending,
-    Features
+    Features,
+    GeneralManager
   }
 }
 </script>
@@ -36,7 +38,7 @@ export default {
 <style>
 body {
 
-  /* overflow: auto; */
+   overflow: auto; 
   margin: 0;
   font-family: 'Arial', sans-serif;
 }
@@ -45,9 +47,9 @@ body {
   position: relative;
 }
 
-/* body::-webkit-scrollbar {
+ body::-webkit-scrollbar {
   display: none;
-} */
+} 
 
 .container {
   max-width: 1200px;

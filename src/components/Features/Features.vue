@@ -1,42 +1,48 @@
 <template>
-    <section class="features">
-      <div class="container">
-        <h2>{{ heading }}</h2>
-        <div class="features-list">
-          <div
-            v-for="(feature, index) in featuresFirst"
-            :key="index"
-            class="feature-item"
-          >
-            <h3>{{ feature.icon }}</h3>
-            <p>{{ feature.description }}</p>
-          </div>
+  <section class="features">
+    <div class="container">
+      <div class="features-list">
+        <div
+          v-for="(feature, index) in featuresFirst"
+          :key="index"
+          class="feature-item"
+        >
+          <img :src="getImagePath(feature.icon)"  />
+          <h3>{{ feature.title }}</h3>
+          <!-- <p>{{ feature.description }}</p> -->
         </div>
-        <div class="features-list">
-          <div
-            v-for="(feature, index) in featuresSecond"
-            :key="index"
-            class="feature-item"
-          >
-            <div class="feature-content">
-              <h3>{{ feature.icon }}</h3>
-              <p>{{ feature.description }}</p>
-            </div>
+      </div>
+      <div class="features-list">
+        <div
+          v-for="(feature, index) in featuresSecond"
+          :key="index"
+          class="feature-item"
+        >
+          <div class="feature-content">
+            <img :src="getImagePath(feature.icon)" />
+            <h3>{{ feature.title }}</h3>
           </div>
         </div>
       </div>
-    </section>
-  </template>
-  
-  <script>
-  export default {
-    name: "FeaturesSection",
-    props: {
-      heading: String,
-      featuresFirst: Array,
-      featuresSecond: Array,
-    },
-  };
-  </script>
-  
-  
+    </div>
+  </section>
+</template>
+
+<script>
+import './Features.css';
+
+export default {
+  name: "FeaturesSection",
+  props: {
+    featuresFirst: Array,
+    featuresSecond: Array,
+  },
+  methods: {
+    // Метод для формирования пути к изображению
+    getImagePath(imageName) {
+      return require(`@/assets/${imageName}`);
+    }
+  }
+};
+</script>
+

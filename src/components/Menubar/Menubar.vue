@@ -15,7 +15,7 @@
     </ul>
   </nav>
 </template>
-
+/* eslint-disable */
 <script>
 import "./Menubar.css";
 

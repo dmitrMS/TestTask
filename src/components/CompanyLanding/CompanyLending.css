@@ -1,0 +1,53 @@
+.main-picture {
+  display: flex;
+  margin-top: 2%;
+  position: relative;
+}
+
+.main-picture-blue {
+  z-index: 1;
+}
+
+.main-picture-town {
+  position: absolute;
+  right: 0;
+}
+
+.main-picture-humans {
+  position: absolute;
+  bottom: 0; /* Закрепляем к нижней части родительского контейнера */
+  left: calc(70% - 50%); /* Сдвигаем изображение по горизонтали */
+  left: 70%;
+  transform: translateX(-50%); /* Центрируем по горизонтали */
+  z-index: 1;
+  transition: left 0.5s ease; /* Плавный переход при изменении ширины */
+}
+
+.main-picture-landing {
+  position: absolute;
+  transform: translateX(50%);
+  transform: translateY(50%);
+  z-index: 2;
+}
+
+.main-picture-landing__h2 {
+  color: white;
+  max-width: 60%;
+}
+
+.main-picture-landing__button {
+  background-color: #f0a500;
+  color: white;
+  font-size: large;
+  height: 25px;
+  border: none;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .main-picture-humans {
+    left: calc(
+      40% - -20%
+    ); /* Отступ уменьшается на экранах шириной менее 768px */
+  }
+}
