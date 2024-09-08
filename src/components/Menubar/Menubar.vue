@@ -1,34 +1,39 @@
 <template>
   <nav class="menubar">
     <div class="logo">
-      <img src="@/assets/CADesign.svg" />
+      <img src="@/assets/CADesign.svg" loading="lazy" />
     </div>
     <ul class="menu">
-      <div class="menu__li">
-      <li
-        v-for="(item, index) in menuItems"
-        :key="index"
-        @click="selectItem(index)"
-        :class="{ active: selectedIndex === index }"
-      >
-        <a href="#" class="menu__li-a">{{ item }}</a>
-      </li>
-    </div>
+        <li
+          v-for="(item, index) in menuItems"
+          :key="index"
+          @click="selectItem(index)"
+          :class="selectedIndex===index ? 'menu__li-active' : 'menu__li'"
+        >
+          <a href="#" class="menu__li-a">{{ item }}</a>
+        </li>
     </ul>
   </nav>
 </template>
 
 <script>
-import './Menubar.css';
+import "./Menubar.css";
 
 export default {
   name: "Menubar",
   data() {
     return {
       // Пункты меню
-      menuItems: ["О нас", "Наши ценности", "Вакансии", "Начало карьеры", "Контакты", "Социальные сети"],
+      menuItems: [
+        "О нас",
+        "Наши ценности",
+        "Вакансии",
+        "Начало карьеры",
+        "Контакты",
+        "Социальные сети",
+      ],
       // Индекс выбранного пункта, по нему идёт опредение активности
-      selectedIndex: 0,
+      selectedIndex: null,
     };
   },
   methods: {
@@ -39,4 +44,3 @@ export default {
   },
 };
 </script>
-
