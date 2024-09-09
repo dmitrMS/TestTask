@@ -26,6 +26,12 @@
   margin: 0;
 }
 
+.menu-icon {
+  position: fixed;
+  right: 5%; /* Показываем иконку меню */
+  display: none;
+}
+
 .menu__li {
   position: relative; /* Для псевдоэлемента, создающего подчеркивание */
   cursor: pointer;
@@ -37,5 +43,54 @@
   font-size: 18px;
   padding: 10px;
   display: inline-block;
-  transition: color 0.3s;
+  width: min-content;
+  transition: font-size 5s ease;
+  transition: padding 5s ease;
+}
+
+.dropdown-menu {
+  display: none;
+  /* display: block; */
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  /* left: 0; */
+  /* width: 100%; */
+  background-color: #fff;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .menu__li-a {
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Скрываем обычное меню */
+  }
+
+  .menu__li-a {
+    font-size: 12px;
+    padding: 0px;
+  }
+
+
+  .logo {
+    margin-left: calc(10% - 5%);
+    margin-right: auto;
+  }
+
+  .menu-icon {
+    display: block; /* Показываем иконку меню */
+  }
+
+  .dropdown-menu {
+    display: block; /* Показываем дропдаун, если меню активно */
+  }
 }

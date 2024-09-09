@@ -7,22 +7,61 @@
   margin-right: 15%;
 }
 
+.main-general__img {
+  right: 5%;
+  position: relative;
+}
+
 .main-general-text {
   padding: 4%;
-  max-width: 50%;
+  max-width: 100%;
   margin-left: 10%;
 }
 
-.main-general__button {
-    
+.main-general__button__left,
+.main-general__button__right {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .main-general__img {
-    position: absolute;
-    bottom: 0; 
-} */
+.main-general__button__left {
+  left: 3%; /* Отодвигаем кнопку влево за пределы основного блока */
+  bottom: 45%;
+  /* border: 1px black solid; */
+  height: 100px;
+  justify-content: center;
+}
 
-.main-general-text__h1 {
+.main-general__button__right {
+  right: 3%; /* Отодвигаем кнопку вправо за пределы основного блока */
+  bottom: 45%;
+  /* border: 1px black solid; */
+  height: 100px;
+  justify-content: center;
+}
+
+.main-general__button__left::before,
+.main-general__button__right::before {
+  content: "";
+  border: 1px solid black;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 8px;
+}
+
+.main-general__button__left::before {
+  transform: rotate(135deg); /* Стрелка влево */
+}
+
+.main-general__button__right::before {
+  transform: rotate(-45deg); /* Стрелка вправо */
 }
 
 .main-general-text-job {
@@ -33,4 +72,46 @@
 
 .main-general-text-overview {
   max-width: 70%;
+}
+
+.min-size-general-text {
+  padding: 4%;
+  max-width: 100%;
+  margin-left: 10%;
+  display: none;
+}
+
+.min-size-general-text__h1 {
+  text-align: center;
+}
+
+.min-size-general-text-job {
+  text-align: center;
+  color: #979797;
+  margin-top: 10px;
+}
+
+.min-size-general-text-overview {
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .main-general-text {
+    display: none;
+  }
+
+  .min-size-general-text {
+    display: block;
+  }
+
+  .main-general__img {
+    right: calc(50% - 5%);
+  }
+}
+
+@media (max-width: 320px) {
+  .main-general__img {
+    right: calc(10% - 50%);
+  }
 }
