@@ -1,3 +1,4 @@
+/* Стили для основного контента */
 .main-picture {
   display: flex;
   margin-top: 2%;
@@ -16,12 +17,11 @@
 
 .main-picture-humans {
   position: absolute;
-  bottom: 0; /* Закрепляем к нижней части родительского контейнера */
-  left: calc(70% - 50%); /* Сдвигаем изображение по горизонтали */
+  bottom: 0;
   left: 70%;
-  transform: translateX(-50%); /* Центрируем по горизонтали */
+  transform: translateX(-50%);
   z-index: 1;
-  transition: left 0.5s ease; /* Плавный переход при изменении ширины */
+  transition: left 0.5s ease, width 0.5s ease;
 }
 
 .main-picture-landing {
@@ -34,6 +34,7 @@
 }
 
 .main-picture-landing__h2 {
+  font-size: 36px;
   color: white;
   max-width: 65%;
   transition: left 0.5s ease;
@@ -41,24 +42,94 @@
 }
 
 .main-picture-landing__button {
-  background-color: #f0a500;
+  background-color: #E9862A;
   color: white;
   font-size: large;
-  height: 60px; /* Высота кнопки */
-  padding: 0 20px; /* Внутренние отступы слева и справа */
+  font-weight: bold;
+  height: 60px;
+  padding: 0 20px;
   border: none;
-  border-radius: 5px; /* Закругление углов */
   display: flex;
-  justify-content: center; /* Центрирование по горизонтали */
-  align-items: center; /* Центрирование по вертикали */
-  cursor: pointer; /* Курсор указателя */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
 }
 
 @media (max-width: 768px) {
   .main-picture-humans {
-    left: calc(
-      40% - -20%
-    );
+    left: calc(40% - -20%);
+    max-height: 334px;
+  }
+
+  .main-picture-blue {
+    max-height: 400px;
+  }
+
+  .main-picture-town {
+    max-height: 400px;
   }
 
   .main-picture {
@@ -74,6 +145,7 @@
 
   .main-picture-landing__h2 {
     max-width: 100%;
+    font-size: 30px;
   }
 
   .main-picture-landing__button {
@@ -93,8 +165,25 @@
     position: absolute;
   }
 
+  .main-picture-blue {
+    max-height: 320px;
+  }
+
+  .main-picture-town {
+    max-height: 320px;
+  }
+
+  .main-picture-landing__h2 {
+    max-width: 100%;
+    font-size: 20px;
+  }
+
   .main-picture-landing__button {
     justify-content: center;
-    margin-top: 120%;
+    margin-top: 100%;
+  }
+
+  .main-picture-humans {
+    max-height: 70%;
   }
 }

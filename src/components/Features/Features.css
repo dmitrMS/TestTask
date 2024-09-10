@@ -1,3 +1,4 @@
+
 .features {
   padding: 50px 0;
   text-align: center;
@@ -5,11 +6,13 @@
 
 .features-list {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap; /* Добавляем перенос строк */
+  justify-content: center;
 }
 
 .feature-item {
-  width: 30%;
+  width: 290px;
+  height: 290px;
   background-color: white;
   border: 1px rgb(209, 208, 208) solid;
   padding: 50px;
@@ -18,4 +21,14 @@
 .feature-content {
   justify-content: center; /* Центровка по горизонтали */
   align-items: center;
+}
+
+@media (max-width: 320px) {
+  .features {
+    padding: 20px 0;
+  }
+
+  .features-list {
+    display: none;
+  }
 }

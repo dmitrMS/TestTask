@@ -12,6 +12,7 @@
       >
         <a href="#" class="menu__li-a">{{ item }}</a>
       </li>
+      <a href="#" class="menu__li__social">Социальные сети</a>
     </ul>
     <div class="menu-icon" @click="toggleDropdown">
       <img src="@/assets/menu.svg" alt="Menu" />
@@ -25,6 +26,7 @@
       >
         <a href="#" class="menu__li-a">{{ item }}</a>
       </li>
+      <a href="#" class="menu__li__social">Социальные сети</a>
     </ul>
   </nav>
 </template>
@@ -43,7 +45,6 @@ export default {
         "Вакансии",
         "Начало карьеры",
         "Контакты",
-        "Социальные сети",
       ],
       // Индекс выбранного пункта, по нему идёт опредение активности
       selectedIndex: null,

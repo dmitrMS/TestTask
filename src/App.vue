@@ -3,13 +3,11 @@
   <Menubar/>
   <CompanyLending/>
   <Features
-      :featuresFirst="[
+      :features="[
         { title: 'Развитие', description: 'что-то',icon:'Rasvitie.svg' },
         { title: 'Обучение', description: 'что-то',icon:'Obychenie.svg' },
         { title: 'Ответсвенность', description: 'Гибкие возможности настройки.',icon:'Otvetstvennost.svg' },
-      ]"
-      :featuresSecond="[
-        { title: 'Динамика', description: 'Общего центра обслуживания.Современные технологии, проекты, рабочие группы',icon:'Dinamica.svg' },
+        { title: 'Динамика', description: 'Общего центра обслуживания.Современные технологии, проекты, рабочие группы',icon:'Dynamic.svg' },
         { title: 'Комфорт', description: 'что-то',icon:'Komfort.svg' },
         { title: 'Надёжность', description: 'что-то',icon:'Nadezhnost.svg' },
       ]"

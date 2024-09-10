@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 20px;
+  padding-bottom: 1%;
+  padding-top: 3%;
   background-color: #ffff;
   color: black;
   border-bottom: 1px rgb(209, 208, 208) solid;
@@ -13,7 +14,6 @@
 }
 
 .logo {
-  margin-left: 10%;
   margin-right: 10%;
   font-size: 24px;
   color: #fff;
@@ -37,12 +37,18 @@
   cursor: pointer;
 }
 
+.menu__li__social {
+  text-decoration: none;
+  color: #187CD3;
+
+}
+
 .menu__li-a {
   color: black;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px;
-  display: inline-block;
+  display: inline;
   width: min-content;
   transition: font-size 5s ease;
   transition: padding 5s ease;
@@ -53,33 +59,31 @@
   /* display: block; */
   position: absolute;
   top: 100%;
-  right: 5%;
+  /* right: 5%; */
   /* left: 0; */
   /* width: 100%; */
   background-color: #fff;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 @media (max-width: 1024px) {
   .menu__li-a {
-    font-size: 16px;
+    /* font-size: 16px; */
     padding: 5px;
   }
 }
 
 @media (max-width: 768px) {
+  .menubar {
+    padding: 4%; /* Скрываем обычное меню */
+  }
+
   .menu {
     display: none; /* Скрываем обычное меню */
   }
-
-  .menu__li-a {
-    font-size: 12px;
-    padding: 0px;
-  }
-
 
   .logo {
     margin-left: calc(10% - 5%);
