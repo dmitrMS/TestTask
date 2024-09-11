@@ -7,51 +7,32 @@
       <h1 class="main-picture-landing__h2">
         Энергия твоего роста - заряжаем твою карьеру!
       </h1>
-      <button @click="openModal" class="main-picture-landing__button">Стать частью команды</button>
+      <button @click="openModal" class="main-picture-landing__button">
+        Стать частью команды
+      </button>
     </div>
   </div>
 
-  <!-- Модальное окно отклика на вакансию -->
-  <div v-if="isModalOpen" class="modal-overlay" @click.self="closeModal">
-    <div class="modal-content">
-      <button class="close-button" @click="closeModal">X</button>
-      <h2>Отклик на вакансию</h2>
-      <form @submit.prevent="submitApplication">
-        <div class="form-group">
-          <label for="name">Имя</label>
-          <input v-model="form.name" type="text" id="name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input v-model="form.email" type="email" id="email" required />
-        </div>
-        <div class="form-group">
-          <label for="resume">Прикрепить резюме</label>
-          <input type="file" id="resume" @change="handleFileUpload" />
-        </div>
-        <div class="form-group">
-          <label for="message">Сообщение</label>
-          <textarea v-model="form.message" id="message" rows="4"></textarea>
-        </div>
-        <button type="submit" class="submit-button">Отправить</button>
-      </form>
-    </div>
-  </div>
+  <!-- Подключаем компонент модального окна -->
+  <JobApplicationModal
+    :isOpen="isModalOpen"
+    @close="closeModal"
+    @submit="submitApplication"
+  />
 </template>
 
 <script>
+import JobApplicationModal from "../ModalModule/Modal.vue";
+
 export default {
   name: "CompanyLending",
   data() {
     return {
       isModalOpen: false,
-      form: {
-        name: "",
-        email: "",
-        resume: null,
-        message: ""
-      }
     };
+  },
+  components: {
+    JobApplicationModal,
   },
   methods: {
     openModal() {
@@ -60,22 +41,11 @@ export default {
     closeModal() {
       this.isModalOpen = false;
     },
-    handleFileUpload(event) {
-      this.form.resume = event.target.files[0];
-    },
-    submitApplication() {
-      console.log("Отправлено:", this.form);
-      // Очистка формы
-      this.form = {
-        name: "",
-        email: "",
-        resume: null,
-        message: ""
-      };
+    submitApplication(form) {
+      console.log("Данные отправлены:", form);
       this.closeModal();
-    }
-  }
+    },
+  },
 };
 </script>
-
 
