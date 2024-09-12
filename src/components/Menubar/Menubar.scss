@@ -56,12 +56,8 @@
 
 .dropdown-menu {
   display: none;
-  /* display: block; */
   position: absolute;
   top: 100%;
-  /* right: 5%; */
-  /* left: 0; */
-  /* width: 100%; */
   background-color: #fff;
   list-style-type: none;
   padding: 0;
@@ -71,7 +67,6 @@
 
 @media (max-width: 1024px) {
   .menu__li-a {
-    /* font-size: 16px; */
     padding: 5px;
   }
 }

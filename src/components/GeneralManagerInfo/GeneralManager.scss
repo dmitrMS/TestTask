@@ -33,17 +33,15 @@
 }
 
 .main-general__button__left {
-  left: 3%; /* Отодвигаем кнопку влево за пределы основного блока */
+  left: 3%; /* Отодвигаем кнопку вправо за пределы основного блока */
   bottom: 45%;
-  /* border: 1px black solid; */
   height: 100px;
   justify-content: center;
 }
 
 .main-general__button__right {
-  right: 3%; /* Отодвигаем кнопку вправо за пределы основного блока */
+  right: 3%; 
   bottom: 45%;
-  /* border: 1px black solid; */
   height: 100px;
   justify-content: center;
 }
@@ -110,7 +108,6 @@
   }
 
   .main-general__img {
-    /* right: calc(50% - 5%); */
     max-height: 383px;
   }
 
@@ -118,7 +115,6 @@
 
 @media (max-width: 480px) {
   .main-general__img {
-    /* right: calc(10% - 50%); */
     max-height: 290px;
   }
 
@@ -130,7 +126,6 @@
 
 @media (max-width: 320px) {
   .main-general__img {
-    /* right: calc(10% - 50%); */
     max-height: 201px;
   }
 

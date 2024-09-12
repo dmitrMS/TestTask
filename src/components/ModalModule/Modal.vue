@@ -3,10 +3,9 @@
     <div class="modal-content">
       <button class="close-button" @click="closeModal">X</button>
       <h2 class="modal__h2">Отклик на вакансию</h2>
-      <form @submit.prevent="submitApplication" class="form-container">
+      <form class="form-container">
         <div class="form-group">
           <InputC
-            v-model="form.vacancy"
             parameter="Желаемая вакансия"
             type="text"
             required
@@ -15,18 +14,15 @@
 
         <div class="form-group">
           <InputC
-            v-model="form.fullName"
             parameter="Фамилия, имя и отчество"
             type="text"
             required
           />
         </div>
 
-        <!-- Поля телефона и email в одной строке -->
         <div class="form-group-row">
           <div class="form-group-item">
             <InputC
-              v-model="form.phone"
               parameter="Мобильный телефон"
               type="tel"
               required
@@ -35,7 +31,6 @@
 
           <div class="form-group-item">
             <InputC
-              v-model="form.email"
               parameter="E-mail"
               type="email"
               required
@@ -45,7 +40,6 @@
 
         <div class="form-group">
           <InputC
-            v-model="form.education"
             parameter="Образование"
             type="text"
             required
@@ -54,7 +48,6 @@
 
         <div class="form-group">
           <InputC
-            v-model="form.address"
             parameter="Адрес места жительства"
             type="text"
             required
@@ -64,7 +57,6 @@
         <div class="form-group-row">
           <div class="form-group-birthday">
             <InputC
-              v-model="form.birthDate"
               parameter="Дата рождения"
               type="date"
               required
@@ -78,7 +70,6 @@
             <input
               type="file"
               class="form-group-load"
-              id="resume"
               @change="handleFileUpload"
             />
           </div>
@@ -86,7 +77,6 @@
 
         <div class="form-group-coment">
           <InputC
-            v-model="form.comment"
             parameter="Комментарий"
             rows="4"
           ></InputC>
@@ -118,17 +108,6 @@ export default {
   },
   data() {
     return {
-      form: {
-        vacancy: "",
-        fullName: "",
-        phone: "",
-        email: "",
-        education: "",
-        address: "",
-        birthDate: "",
-        comment: "",
-        resume: null,
-      },
     };
   },
   components: {
@@ -137,25 +116,6 @@ export default {
   methods: {
     closeModal() {
       this.$emit("close");
-    },
-    handleFileUpload(event) {
-      this.form.resume = event.target.files[0];
-    },
-    submitApplication() {
-      console.log("Отправлено:", this.form);
-      this.$emit("submit", this.form);
-      this.form = {
-        vacancy: "",
-        fullName: "",
-        phone: "",
-        email: "",
-        education: "",
-        address: "",
-        birthDate: "",
-        comment: "",
-        resume: null,
-      };
-      this.closeModal();
     },
   },
 };
