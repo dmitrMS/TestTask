@@ -1,6 +1,6 @@
 <template>
     <div class="input-container">
-      <!-- Классы состаяний -->
+      <!-- Классы состояний -->
       <div
         :class="['form-group', 
           { 'input-error': hasError, 'input-success': isValid, 'hover-input': isHovering }
@@ -32,7 +32,7 @@
   
   <script>
   import "./Input.css";
-  
+
   export default {
     data() {
       return {

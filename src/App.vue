@@ -4,12 +4,12 @@
   <CompanyLending/>
   <Features
       :features="[
-        { title: 'Развитие', description: 'что-то',icon:'Rasvitie.svg' },
-        { title: 'Обучение', description: 'что-то',icon:'Obychenie.svg' },
-        { title: 'Ответсвенность', description: 'Гибкие возможности настройки.',icon:'Otvetstvennost.svg' },
-        { title: 'Динамика', description: 'Общего центра обслуживания.Современные технологии, проекты, рабочие группы',icon:'Dynamic.svg' },
-        { title: 'Комфорт', description: 'что-то',icon:'Komfort.svg' },
-        { title: 'Надёжность', description: 'что-то',icon:'Nadezhnost.svg' },
+        { title: 'Развитие', icon:'Rasvitie.svg' },
+        { title: 'Обучение', icon:'Obychenie.svg' },
+        { title: 'Ответсвенность', icon:'Otvetstvennost.svg' },
+        { title: 'Динамика',icon:'Dynamic.svg' },
+        { title: 'Комфорт', icon:'Komfort.svg' },
+        { title: 'Надёжность', icon:'Nadezhnost.svg' },
       ]"
     />
     <GeneralManager/>

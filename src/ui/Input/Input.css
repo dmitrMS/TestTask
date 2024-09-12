@@ -21,21 +21,19 @@
     transition: border 0.3s ease, background-color 0.3s ease;
   }
   
-  /* Hover state */
   input:hover,
   .form-group.hover-input input {
     background-color: #f6f6f6;
   }
   
-  /* Focus state */
+  /* Наведение */
   input:focus,
   input.focus-input {
-    /* border: 1px solid #187cd3; */
     background-color: white;
     outline: none;
   }
   
-  /* Error state */
+  /* Ошибка */
   .input-error input {
     border: 1px solid red;
   }
@@ -55,9 +53,8 @@
     font-size: 12px;
   }
   
-  /* Success state */
+  /* Принято */
   .input-success input {
-    /* border: 1px solid #0bb071; */
     background-color: #f6f6f6;
   }
   
@@ -70,7 +67,7 @@
     font-size: 18px;
   }
   
-  /* Error message */
+  /* Сообщение об ошибке*/
   .error-message {
     color: red;
     font-size: 12px;
