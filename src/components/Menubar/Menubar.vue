@@ -15,7 +15,7 @@
       <a href="#" class="menu__li__social">Социальные сети</a>
     </ul>
     <div class="menu-icon" @click="toggleDropdown">
-      <img src="@/assets/menu.svg" alt="Menu" />
+      <img src="@/assets/menu.svg" alt="Menu" loading="lazy"/>
     </div>
     <ul class="dropdown-menu" v-if="isMobileMenuVisible">
       <li
@@ -32,7 +32,7 @@
 </template>
 /* eslint-disable */
 <script>
-import "./Menubar.css";
+import "./Menubar.scss";
 
 export default {
   name: "Menubar",

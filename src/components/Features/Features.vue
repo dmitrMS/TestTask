@@ -8,9 +8,8 @@
           class="feature-item"
         >
           <div class="feature-content">
-            <img :src="getImagePath(feature.icon)" />
+            <img :src="getImagePath(feature.icon)"  loading="lazy"/>
             <h3>{{ feature.title }}</h3>
-            <!-- <p>{{ feature.description }}</p> -->
           </div>
         </div>
       </div>
@@ -19,7 +18,7 @@
 </template>
 
 <script>
-import "./Features.css";
+import "./Features.scss";
 
 export default {
   name: "FeaturesSection",

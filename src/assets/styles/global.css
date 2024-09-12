@@ -1,0 +1,8 @@
+:root {
+  --primary-color: #e9862a;
+  --text-color-white: white;
+  --z-index-default: 1;
+  --z-index-front: 2;
+  --secondary-color: #187cd3;
+  --border-color: rgb(209, 208, 208);
+}

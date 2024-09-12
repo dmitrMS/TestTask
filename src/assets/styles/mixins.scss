@@ -1,0 +1,32 @@
+/* src/assets/styles/mixins.css */
+
+/* Миксин для центровки элементов */
+@mixin center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Миксин для адаптивного текста */
+  @mixin responsive-text($default-size, $small-size, $mobile-size) {
+    font-size: $default-size;
+  
+    @media (max-width: 768px) {
+      font-size: $small-size;
+    }
+  
+    @media (max-width: 320px) {
+      font-size: $mobile-size;
+    }
+  }
+  
+  /* Миксин для теней */
+  @mixin box-shadow($x-offset, $y-offset, $blur, $color) {
+    box-shadow: $x-offset $y-offset $blur $color;
+  }
+  
+  /* Миксин для переходов */
+  @mixin transition($property, $duration, $timing-function) {
+    transition: $property $duration $timing-function;
+  }
+  

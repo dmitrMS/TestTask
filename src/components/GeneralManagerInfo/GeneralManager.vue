@@ -11,7 +11,7 @@
         отчётности нам.
       </p>
     </div>
-    <img src="@/assets/GeneralManager.svg" class="main-general__img" />
+    <img src="@/assets/GeneralManager.svg" class="main-general__img" loading="lazy"/>
     <button class="main-general__button__right"></button>
   </div>
   <div class="min-size-general-text">
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import "./GeneralManager.css";
+import "./GeneralManager.scss";
 
 export default {
   name: "GeneralManager",

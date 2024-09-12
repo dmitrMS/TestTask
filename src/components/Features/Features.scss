@@ -1,24 +1,27 @@
+@import "@/assets/styles/global.css"; /* Импортируем файл с переменными */
+
 .features {
   padding: 50px 0;
   text-align: center;
+  background-color: var(--text-color-white);
 }
 
 .features-list {
   display: flex;
-  flex-wrap: wrap; /* Добавляем перенос строк */
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .feature-item {
   width: 290px;
   height: 290px;
-  background-color: white;
-  border: 1px rgb(209, 208, 208) solid;
+  background-color: var(--text-color-white);
+  border: 1px var(--border-color) solid;
   padding: 50px;
 }
 
 .feature-content {
-  justify-content: center; /* Центровка по горизонтали */
+  justify-content: center;
   align-items: center;
 }
 
@@ -31,4 +34,3 @@
     display: none;
   }
 }
-

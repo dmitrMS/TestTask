@@ -1,70 +1,76 @@
+@import '@/assets/styles/global.css';
+@import '@/assets/styles/mixins.scss';
+
+/* Основной блок изображения */
 .main-picture {
   display: flex;
   margin-top: 2%;
   position: relative;
-  transition: margin-top 5s ease;
+  @include transition(margin-top, 5s, ease);
 }
 
+/* Слой синего изображения */
 .main-picture-blue {
-  z-index: 1;
+  z-index: var(--z-index-default);
 }
 
+/* Слой города */
 .main-picture-town {
   position: absolute;
   right: 0;
 }
 
+/* Слой людей */
 .main-picture-humans {
   position: absolute;
   bottom: 0;
   left: 70%;
   transform: translateX(-50%);
-  z-index: 1;
-  transition: left 0.5s ease, width 0.5s ease;
+  z-index: var(--z-index-default);
+  transition:left 0.5s ease, width 0.5s ease;
 }
 
+/* Блок с текстом и кнопкой */
 .main-picture-landing {
   position: absolute;
   left: 14%;
-  bottom: 60%;
-  transform: translateX(50%);
   transform: translateY(50%);
-  z-index: 2;
+  z-index: var(--z-index-front);
 }
 
+/* Текст */
 .main-picture-landing__h2 {
-  font-size: 36px;
-  color: white;
+  @include responsive-text(36px, 30px, 20px);
+  color: var(--text-color-white);
   max-width: 65%;
-  transition: left 0.5s ease;
-  transition: bottom 0.5s ease;
+  transition:left 0.5s ease, bottom 0.5s ease;
 }
 
+/* Кнопка */
 .main-picture-landing__button {
-  background-color: #e9862a;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-color-white);
   font-size: large;
   font-weight: bold;
   height: 60px;
   padding: 0 20px;
   border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-content;
   cursor: pointer;
-  /* margin-bottom: 10%; */
 }
 
+.main-picture-landing__button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Адаптация для устройств */
 @media (max-width: 768px) {
   .main-picture-humans {
     left: calc(40% - -20%);
     max-height: 334px;
   }
 
-  .main-picture-blue {
-    max-height: 400px;
-  }
-
+  .main-picture-blue,
   .main-picture-town {
     max-height: 400px;
   }
@@ -75,13 +81,10 @@
 
   .main-picture-landing {
     left: calc(10% - 5%);
-    font-size: medium;
     max-width: 65%;
-    position: absolute;
   }
 
   .main-picture-landing__h2 {
-    max-width: 100%;
     font-size: 30px;
   }
 
@@ -97,21 +100,15 @@
     transform: none;
     padding-left: 10%;
     padding-right: 10%;
-    font-size: 10px;
     max-width: 100%;
-    position: absolute;
   }
 
-  .main-picture-blue {
-    max-height: 320px;
-  }
-
+  .main-picture-blue,
   .main-picture-town {
     max-height: 320px;
   }
 
   .main-picture-landing__h2 {
-    max-width: 100%;
     font-size: 20px;
   }
 

@@ -14,7 +14,7 @@ module.exports = {
     config.module
       .rule('markdown')
       .test(/\.md$/)
-      .use('vue-loader')
+      .use(['vue-loader','sass-loader'])
       .loader('vue-loader')
       .end();
   },

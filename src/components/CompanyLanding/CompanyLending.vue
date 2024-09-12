@@ -1,8 +1,8 @@
 <template>
   <div class="main-picture">
-    <img src="@/assets/blueTheme.svg" class="main-picture-blue" />
-    <img src="@/assets/main-theme-town.svg" class="main-picture-town" />
-    <img src="@/assets/humans.svg" class="main-picture-humans" />
+    <img src="@/assets/blueTheme.svg" class="main-picture-blue" loading="lazy"/>
+    <img src="@/assets/main-theme-town.svg" class="main-picture-town" loading="lazy"/>
+    <img src="@/assets/humans.svg" class="main-picture-humans" loading="lazy"/>
     <div class="main-picture-landing">
       <h1 class="main-picture-landing__h2">
         Энергия твоего роста - заряжаем твою карьеру!
@@ -23,6 +23,7 @@
 
 <script>
 import JobApplicationModal from "../ModalModule/Modal.vue";
+import "./CompanyLending.scss";
 
 export default {
   name: "CompanyLending",
