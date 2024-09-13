@@ -1,3 +1,5 @@
+@import "@/assets/styles/global.css";
+
 .menubar {
   position: relative;
   display: flex;
@@ -7,7 +9,7 @@
   padding-top: 3%;
   background-color: #ffff;
   color: black;
-  border-bottom: 1px rgb(209, 208, 208) solid;
+  border-bottom: 1px var(--border-color) solid;
   top: 0;
   width: 100%;
   background-size: cover;
@@ -39,8 +41,7 @@
 
 .menu__li__social {
   text-decoration: none;
-  color: #187CD3;
-
+  color: var(--secondary-color);
 }
 
 .menu__li-a {
@@ -58,11 +59,11 @@
   display: none;
   position: absolute;
   top: 100%;
-  background-color: #fff;
+  background-color: var(--text-color-white);
   list-style-type: none;
   padding: 0;
   margin: 0;
-  z-index: 3;
+  z-index: var(--z-index-dropdown);
 }
 
 @media (max-width: 1024px) {

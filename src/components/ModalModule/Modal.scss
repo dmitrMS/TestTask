@@ -1,3 +1,5 @@
+@import "@/assets/styles/global.css";
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -12,7 +14,7 @@
   }
   
   .modal-content {
-    background: white;
+    background: var(--text-color-white);
     padding: 20px;
     max-width: 1145px;
     max-height: 1205px;
@@ -89,12 +91,12 @@
   
   .work-form__a {
     margin-left: 5px;
-    color: #187cd3;
+    color: var(--secondary-color);
     text-decoration: none;
   }
   
   .submit-button {
-    background-color: #e9862a;
+    background-color: var(--primary-color);
     color: white;
     font-size: 16px;
     padding: 10px;
@@ -104,10 +106,6 @@
     margin-bottom: 15px;
     margin-left: 30%;
     align-self: flex-end;
-  }
-  
-  .submit-button:hover {
-    background-color: #d7741f;
   }
   
   .work-form {
